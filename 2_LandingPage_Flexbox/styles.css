@@ -112,3 +112,24 @@ a:link {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
+/* Quote Section */
+.quote {
+  background-color: #e5e7eb;
+}
+
+.quote-body {
+  padding: 80px 340px;
+}
+
+.quote-author {
+  display: flex;
+  justify-content: end;
+}
+
+.quote-text p {
+  font-size: 36px;
+  font-style: italic;
+  font-weight: light;
+  color: #1f2937;
+}
