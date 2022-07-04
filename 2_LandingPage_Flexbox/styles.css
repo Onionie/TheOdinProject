@@ -133,3 +133,53 @@ a:link {
   font-weight: light;
   color: #1f2937;
 }
+
+/* CTA Section */
+.cta,
+.cta-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta {
+  height: 300px;
+}
+
+.cta-body {
+  border-radius: 8px;
+  background-color: #3882f6;
+  height: 150px;
+  width: 65%;
+  gap: 100px;
+}
+
+.cta-text h2 {
+  color: rgb(230, 230, 230);
+}
+
+.cta-text p {
+  color: rgb(200, 199, 199);
+}
+
+.cta-button-container button {
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: #3882f6;
+  color: white;
+}
+
+/* Footer Section */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #1f2937;
+  font-size: 20px;
+  color: #f6f8fb;
+  height: 80px;
+}
