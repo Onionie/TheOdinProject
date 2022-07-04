@@ -34,7 +34,7 @@ nav {
 nav a,
 p {
   font-size: 18px;
-  color: #e5e7eb;
+  color: #aeb0b5;
 }
 
 a:link {
@@ -76,4 +76,39 @@ a:link {
   justify-content: center;
 }
 
-/* CTA Section */
+/* InfoSection */
+.info {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 0 300px;
+}
+
+.info-header {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.info-header h3 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #1f2937;
+}
+
+.info-body {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.info-item {
+  width: 150px;
+  text-align: center;
+}
+
+.info-item-box {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #3882f6;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
