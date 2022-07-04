@@ -4,16 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font style google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+
     <title>Landing Page</title>
   </head>
   <body>
-    <header>
-      <h3>Header Logo</h3>
-      <nav>
-        <a href="#">Header Link One</a>
-        <a href="#">Header Link Two</a>
-        <a href="#">Header Link Three</a>
-      </nav>
-    </header>
+    <div class="hero">
+      <header class="flex-container">
+        <h3>Header Logo</h3>
+        <nav class="flex-container">
+          <a href="#">Header Link One</a>
+          <a href="#">Header Link Two</a>
+          <a href="#">Header Link Three</a>
+        </nav>
+      </header>
+
+      <!-- Hero Body -->
+      <div class="hero-body flex-container">
+        <div class="left-hero-body">
+          <h2>This website is awesome</h2>
+          <p>
+            This website has some subtext that goes here under the main title.
+            It's a smaller font and the color is lower contrast.
+          </p>
+          <button>Sign up</button>
+        </div>
+
+        <div class="right-hero-body">
+          <div class="placeholder">
+            <p>This is a placeholder for an image</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+    </div>
   </body>
 </html>
