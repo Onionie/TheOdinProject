@@ -3,6 +3,9 @@ const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissor = document.querySelector('.scissors');
 const result = document.querySelector('.result-text');
+const yourScoreBox = document.querySelector('.player-score');
+const computerScoreBox = document.querySelector('.computer-score');
+const modal = document.querySelector('.modal');
 
 // ********* Functions *********
 function computerPlay() {
@@ -23,6 +26,15 @@ function computerPlay() {
 // Score Tracker
 let playerScore = 0;
 let computerScore = 0;
+
+function updateScore() {
+  yourScoreBox.innerHTML = playerScore;
+  computerScoreBox.innerHTML = computerScore;
+
+  if (playerScore === 5 || computerScore === 5) {
+    modal.classList.add('active');
+  }
+}
 
 // Winning Conditions
 function playRound(playerSelection, computerSelection) {
@@ -55,14 +67,17 @@ function playRound(playerSelection, computerSelection) {
 rock.addEventListener('click', function () {
   // Evey Click, generate a new number
   playRound('rock', computerPlay());
+  updateScore();
 });
 
 paper.addEventListener('click', function () {
   playRound('paper', computerPlay());
+  updateScore();
 });
 
 scissor.addEventListener('click', function () {
   playRound('scissor', computerPlay());
+  updateScore();
 });
 
 //game();
