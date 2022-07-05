@@ -2,6 +2,7 @@
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissor = document.querySelector('.scissors');
+const result = document.querySelector('.result-text');
 
 // ********* Functions *********
 function computerPlay() {
@@ -16,7 +17,6 @@ function computerPlay() {
     computerChoose = 'scissor';
   }
 
-  console.log('Computer Selects: ' + computerChoose);
   return computerChoose;
 }
 
@@ -27,25 +27,25 @@ let computerScore = 0;
 // Winning Conditions
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    console.log("It's a Draw");
+    result.innerHTML = "It's a Draw";
   } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-    console.log('You lose');
+    result.innerHTML = 'Computer chose: Paper.   You lose!';
     return computerScore++;
   } else if (playerSelection === 'rock' && computerSelection === 'scissor') {
-    console.log('You win');
+    result.innerHTML = 'Computer chose: Scissors.   You win!';
     return playerScore++;
   } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-    console.log('You win');
+    result.innerHTML = 'Computer chose: Rock.   You win!';
     return playerScore++;
   } else if (playerSelection === 'paper' && computerSelection === 'scissor') {
-    console.log('You lose');
+    result.innerHTML = 'Computer chose: Scissors.   You lose!';
     return computerScore++;
   } else if (playerSelection === 'scissor' && computerSelection === 'rock') {
-    console.log('You lose');
+    result.innerHTML = 'Computer chose: Rock.   You lose!';
     return computerScore++;
   } else if (playerSelection === 'scissor' && computerSelection === 'paper') {
-    console.log('You win');
-    return playerScore + 1;
+    result.innerHTML = 'Computer chose: Paper.   You win';
+    return playerScore++;
   } else {
     console.log('Invalid');
   }

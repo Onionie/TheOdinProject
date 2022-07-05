@@ -35,7 +35,10 @@ button:active {
 
 .result-container {
   text-align: center;
-  background-color: bisque;
   height: 60px;
-  font-size: 22px;
+}
+
+.result-text {
+  font-size: 26px;
+  font-weight: bold;
 }
