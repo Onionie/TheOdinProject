@@ -55,6 +55,6 @@ function game() {
   console.log('Computer Score: ' + computerScore);
 }
 
-while (playerScore < 5 && computerScore < 5) {
-  game();
-}
+// while (playerScore < 5 && computerScore < 5) {
+//   game();
+// }
