@@ -16,15 +16,14 @@ Different projects inspired by a free open source coding curriculum.
 
 ## Full Stack Javascript
 
-- Intermediate HTML and CSS
-
+<!-- prettier-ignore -->
+- <b>Intermediate HTML and CSS</b>
   - Forms
     - Project: Sign-up Form
   - Grid
     - Project: Admin Dashboard
 
-- Javascript
-
+- <b>Javascript</b>
   - Organizing your JavaScript code
     - Project: Library
     - Project: Tic Tac Toe
@@ -45,11 +44,10 @@ Different projects inspired by a free open source coding curriculum.
   - Finish Up with JavaScript
     - Project: JavaScript Final Project
 
-- Advanced HTML and CSS
-
+- <b>Advanced HTML and CSS</b>
   - Project: Personal Portfolio
 
-- NodeJS
+- <b>NodeJS</b>
   - Introduction to Nodejs
     - Project: Basic Informational Site
   - MongoDB
