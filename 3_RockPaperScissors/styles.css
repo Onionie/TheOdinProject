@@ -19,7 +19,7 @@ h1 {
 
 button {
   background-color: rgb(238, 255, 0);
-  font-size: 22px;
+  font-size: 26px;
   width: 200px;
   height: 200px;
   border-radius: 8px;
@@ -27,4 +27,15 @@ button {
 
 button:hover {
   background-color: rgb(255, 255, 0);
+}
+
+button:active {
+  background-color: rgb(198, 212, 5);
+}
+
+.result-container {
+  text-align: center;
+  background-color: bisque;
+  height: 60px;
+  font-size: 22px;
 }
