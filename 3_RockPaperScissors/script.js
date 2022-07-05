@@ -3,18 +3,6 @@ const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissor = document.querySelector('.scissors');
 
-rock.addEventListener('click', () => {
-  console.log('rock is clicked');
-});
-
-paper.addEventListener('click', () => {
-  console.log('paper is clicked');
-});
-
-scissor.addEventListener('click', () => {
-  console.log('scissors is clicked');
-});
-
 // ********* Functions *********
 function computerPlay() {
   const randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -28,12 +16,15 @@ function computerPlay() {
     computerChoose = 'scissor';
   }
 
+  console.log('Computer Selects: ' + computerChoose);
   return computerChoose;
 }
 
+// Score Tracker
 let playerScore = 0;
 let computerScore = 0;
 
+// Winning Conditions
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     console.log("It's a Draw");
@@ -60,18 +51,21 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {
-  const playerSelects = prompt(
-    'Type your choice: rock, paper, scissor: '
-  ).toLowerCase();
+// When buttons Clicked, Send corresponding parameters to playRound function
+rock.addEventListener('click', function () {
+  // Evey Click, generate a new number
+  playRound('rock', computerPlay());
+});
 
-  const computerSelects = computerPlay();
+paper.addEventListener('click', function () {
+  playRound('paper', computerPlay());
+});
 
-  playRound(playerSelects, computerSelects);
+scissor.addEventListener('click', function () {
+  playRound('scissor', computerPlay());
+});
 
-  console.log('Your Score: ' + playerScore);
-  console.log('Computer Score: ' + computerScore);
-}
+//game();
 
 // while (playerScore < 5 && computerScore < 5) {
 //   game();
