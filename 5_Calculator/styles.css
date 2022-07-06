@@ -23,6 +23,7 @@ body {
   background-color: aliceblue;
   border-radius: 5px;
   margin-bottom: 20px;
+  min-height: 114px;
 }
 
 .calculator-clear-delete {

@@ -3,6 +3,9 @@
 const historyInput = document.querySelector('.history-container');
 const currentInput = document.querySelector('.current-container');
 
+const keyClear = document.querySelector('.calculator-clear');
+const keyDelete = document.querySelector('.calculator-delete');
+
 // Buttons
 const key0 = document.querySelector('.button-0');
 const key1 = document.querySelector('.button-1');
@@ -56,9 +59,23 @@ const operate = (operator, num1, num2) => {
   }
 };
 
-let screenDisplay = '';
+let screenDisplay = []; //Array?
+
+const displayKey = (key) => {
+  screenDisplay.push(key);
+  console.log(screenDisplay);
+  currentInput.innerHTML = screenDisplay;
+};
 
 // OnClick Listeners
-keyDivide.addEventListener('click', () => console.log('Key Working'));
+key1.addEventListener('click', function () {
+  displayKey(1);
+});
 
-historyInput.innerHTML = '1234';
+// Clear Current and History
+keyClear.addEventListener('click', () => {
+  screenDisplay = [];
+  currentInput.innerHTML = screenDisplay;
+});
+
+historyInput.innerHTML = '1234'; //Change display?
