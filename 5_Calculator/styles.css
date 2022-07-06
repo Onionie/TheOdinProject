@@ -1,0 +1,11 @@
+body {
+  background-color: bisque;
+}
+
+.calculator-body {
+  background-color: rgb(71, 126, 209);
+  min-width: 200px;
+  min-height: 500px;
+
+  margin: 100px 400px;
+}
