@@ -1,6 +1,6 @@
 // DOM selecting elements
 // Screen
-const historyInput = document.querySelector('.history-container');
+const previousResult = document.querySelector('.history-container');
 const currentInput = document.querySelector('.current-container');
 
 const keyClear = document.querySelector('.calculator-clear');
@@ -59,12 +59,13 @@ const operate = (operator, num1, num2) => {
   }
 };
 
-let screenDisplay = []; //Array?
+let displayCurrentInput = []; //Array?
+let displayPreviousResult = [];
 
 const displayKey = (key) => {
-  screenDisplay.push(key);
-  console.log(screenDisplay);
-  currentInput.innerHTML = screenDisplay;
+  displayCurrentInput.push(key);
+  console.log(displayCurrentInput);
+  currentInput.innerHTML = displayCurrentInput;
 };
 
 // OnClick Listeners
@@ -74,8 +75,10 @@ key1.addEventListener('click', function () {
 
 // Clear Current and History
 keyClear.addEventListener('click', () => {
-  screenDisplay = [];
-  currentInput.innerHTML = screenDisplay;
+  displayCurrentInput = [];
+  displayPreviousResult = [];
+  currentInput.innerHTML = displayCurrentInput;
+  previousResult.innerHTML = displayPreviousResult;
 });
 
-historyInput.innerHTML = '1234'; //Change display?
+previousResult.innerHTML = '1234'; //Change display?
