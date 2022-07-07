@@ -59,6 +59,18 @@ const operate = (operator, num1, num2) => {
   }
 };
 
+const operatorExists = (array) => {
+  if (
+    array.findIndex('+') ||
+    array.findIndex('-') ||
+    array.findIndex('*') ||
+    array.findIndex('/')
+  ) {
+    console.log(array);
+    return true;
+  }
+};
+
 let displayCurrentInput = []; //Array?
 let displayPreviousResult = [];
 
@@ -71,6 +83,7 @@ const displayKey = (key) => {
 // OnClick Listeners
 key1.addEventListener('click', function () {
   displayKey(1);
+  operatorExists(displayCurrentInput);
 });
 
 // Clear Current and History
