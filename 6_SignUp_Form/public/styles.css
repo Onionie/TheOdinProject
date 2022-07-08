@@ -8,20 +8,47 @@ body {
   background-color: aliceblue;
 }
 
-.main {
+.main-container {
   display: flex;
 }
 
-.main div {
+.main {
   height: 100vh;
   width: 100%;
 }
+
 .left-container {
   background-color: aqua;
   background-image: url('./images/leaf-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   flex: 1 0 37%;
+}
+
+.title-container {
+  background-color: rgba(0, 0, 0, 0.486);
+  font-family: 'Skranji', cursive;
+
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.image-container {
+  width: 17%;
+}
+
+.odin-image {
+  width: 100%;
+  height: auto;
+}
+
+.text-container h1 {
+  display: inline-block;
+  padding-bottom: 30px;
+  color: white;
+  font-size: 72px;
+  margin-top: 35px;
 }
 
 .right-container {
