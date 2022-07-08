@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.main div {
+  height: 500px;
+  width: 100%;
+}
+.left-container {
+  background-color: aqua;
+}
+
+.right-container {
+  background-color: aquamarine;
+}
