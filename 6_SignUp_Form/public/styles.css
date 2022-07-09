@@ -122,5 +122,24 @@ body {
 
 .bottom {
   background-color: aliceblue;
+  padding-top: 40px;
   flex: 1;
+}
+
+.bottom button {
+  font-size: 26px;
+  color: #fff;
+  padding: 10px 30px;
+  background-color: #596d48;
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+}
+
+.bottom button:hover {
+  background-color: #657c51;
+}
+
+.bottom button:active {
+  background-color: #48583a;
 }
