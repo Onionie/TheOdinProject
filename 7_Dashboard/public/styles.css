@@ -21,6 +21,16 @@ body {
   width: 100%;
 }
 
+.side-bar-container {
+  margin-top: 2rem;
+  font-size: 3.2rem;
+}
+
+.home,
+.settings {
+  margin-top: 4rem;
+}
+
 .header {
   background-color: white;
   height: 20%;
