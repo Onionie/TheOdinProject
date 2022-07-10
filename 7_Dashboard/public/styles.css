@@ -25,13 +25,13 @@ body {
 .side-bar-container {
   margin-top: 2rem;
   padding-left: 2rem;
-  font-size: 3.2rem;
   color: white;
 }
 
 .title {
   display: flex;
   align-items: center;
+  font-size: 3.2rem;
 }
 
 .title h4 {
@@ -42,6 +42,16 @@ body {
 .home,
 .settings {
   margin-top: 4rem;
+  font-size: 2.2rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+li {
+  margin-bottom: 1.4rem;
 }
 
 .header {
