@@ -8,17 +8,18 @@ body {
   padding: 0;
   box-sizing: border-box;
 
-  background-color: antiquewhite;
+  background-color: black;
 }
 
 .main-container {
   display: grid;
+  height: 100vh;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
 }
 
 .side-bar {
   background-color: #0891b2;
-  height: 100vh;
   width: 100%;
 }
 
@@ -105,22 +106,73 @@ li {
   align-items: flex-start;
   justify-content: end;
 }
+
 .profile-box {
   display: flex;
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .donut-pic {
   border-radius: 50%;
-  height: 5.6rem;
-  width: 5.6rem;
+  height: 4.2rem;
+  width: 4.2rem;
 }
 
 .user {
   margin: 0;
+  font-size: 1.8rem;
+}
+
+.greetings-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.greetings {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  margin-right: 2rem;
+}
+
+.greeting {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.username {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.actions a {
+  display: inline-block;
+}
+
+.actions a:link,
+.actions a:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+
+  background-color: #06b6d4;
+  border-radius: 3rem;
+  margin-right: 3rem;
+  padding: 1rem 2rem;
 }
 
 .main-body {
