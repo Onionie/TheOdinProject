@@ -28,13 +28,13 @@ body {
   color: white;
 }
 
-.title {
+.title-box {
   display: flex;
   align-items: center;
   font-size: 3.2rem;
 }
 
-.title h4 {
+.title {
   margin: 0;
   margin-left: 1rem;
 }
@@ -63,9 +63,7 @@ li {
 .header {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
   row-gap: 1rem;
-
   background-color: white;
 }
 
@@ -77,6 +75,7 @@ li {
 .greetings-container {
   display: grid;
   grid-template-columns: 6.5fr 3.5fr;
+  align-items: center;
   margin-left: 3rem;
 }
 
@@ -93,7 +92,7 @@ li {
   height: 3rem;
   width: 65%;
 
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .search-box:focus {
@@ -102,11 +101,29 @@ li {
 }
 
 .profile {
-  background-color: red;
+  display: flex;
+  align-items: flex-start;
+  justify-content: end;
+}
+.profile-box {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+}
+
+.donut-pic {
+  border-radius: 50%;
+  height: 5.6rem;
+  width: 5.6rem;
+}
+
+.user {
+  margin: 0;
 }
 
 .main-body {
   background-color: #a5b4fc;
   width: 100%;
-  height: 100%;
 }
