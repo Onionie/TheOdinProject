@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,14 +17,26 @@ body {
 }
 
 .side-bar {
-  background-color: #06b6d4;
+  background-color: #0891b2;
   height: 100vh;
   width: 100%;
 }
 
 .side-bar-container {
   margin-top: 2rem;
+  padding-left: 2rem;
   font-size: 3.2rem;
+  color: white;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title h4 {
+  margin: 0;
+  margin-left: 1rem;
 }
 
 .home,
