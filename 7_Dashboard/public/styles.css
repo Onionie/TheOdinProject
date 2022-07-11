@@ -195,6 +195,7 @@ li {
 }
 
 .content-container {
+  display: grid;
   grid-template-columns: 2fr 1fr;
 
   background-color: red;
@@ -203,5 +204,29 @@ li {
   width: 100%;
 }
 
+.projects {
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+}
+.projects-title {
+  font-size: 2.2rem;
+}
+
 .projects-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.list {
+  background-color: red;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.items {
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
 }
