@@ -190,7 +190,7 @@ li {
 
 /****** Main Body ******/
 .main-body {
-  background-color: #a5b4fc;
+  background-color: #bcc5f2;
   padding: 2rem 1.6rem;
 }
 
@@ -233,6 +233,15 @@ li {
   color: rgb(66, 65, 65);
 }
 
+.list-icons {
+  display: flex;
+  justify-content: end;
+  margin-right: 1rem;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+/***** Items Section *****/
 .items {
   background-color: yellow;
 }
