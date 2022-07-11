@@ -55,6 +55,19 @@ li {
   margin-bottom: 1.4rem;
 }
 
+.icon-box {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.tasks-icon {
+  font-size: 2.6rem;
+}
+
+.community-icon {
+  font-size: 1.8rem;
+}
+
 .body {
   display: grid;
   grid-template-columns: 1fr;
@@ -175,7 +188,20 @@ li {
   padding: 1rem 2rem;
 }
 
+/****** Main Body ******/
 .main-body {
   background-color: #a5b4fc;
+  padding: 2rem 1.6rem;
+}
+
+.content-container {
+  grid-template-columns: 2fr 1fr;
+
+  background-color: red;
+
+  height: 100%;
   width: 100%;
+}
+
+.projects-list {
 }
