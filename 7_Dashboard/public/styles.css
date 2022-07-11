@@ -197,20 +197,15 @@ li {
 .content-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-
-  background-color: red;
-
-  height: 100%;
-  width: 100%;
 }
 
 .projects {
-  background-color: blue;
-  height: 100%;
-  width: 100%;
+  padding: 2rem;
 }
 .projects-title {
   font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 .projects-list {
@@ -220,7 +215,12 @@ li {
 }
 
 .list {
-  background-color: red;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-left: 0.6rem solid orange;
+
+  padding: 1rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
 }
