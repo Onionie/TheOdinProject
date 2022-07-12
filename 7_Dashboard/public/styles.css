@@ -202,7 +202,9 @@ li {
 .projects {
   padding: 2rem;
 }
-.projects-title {
+.projects-title,
+.announcements-title,
+.trending-title {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -244,4 +246,18 @@ li {
 /***** Items Section *****/
 .items {
   background-color: yellow;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 2rem;
+}
+
+.announcements {
+  background-color: red;
+  height: 90%;
+}
+
+.trending {
+  background-color: blue;
+  height: 90%;
 }
