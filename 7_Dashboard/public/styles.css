@@ -245,16 +245,35 @@ li {
 
 /***** Items Section *****/
 .items {
-  background-color: yellow;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
+  row-gap: 4rem;
   padding: 2rem;
 }
 
-.announcements {
-  background-color: red;
-  height: 90%;
+.announcements-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 2rem;
+  padding: 3rem;
+
+  background-color: white;
+  border-radius: 0.4rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.announcements-box {
+}
+
+.announcement-header {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.announcement-body {
+  font-size: 1.4rem;
 }
 
 .trending {
