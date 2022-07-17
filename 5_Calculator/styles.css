@@ -17,6 +17,10 @@ body {
 }
 
 .calculator-screen {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
   text-align: end;
   font-size: 40px;
   padding: 10px;
