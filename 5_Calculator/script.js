@@ -30,48 +30,29 @@ const multiply = (num1, num2) => {
 
 const divide = (num1, num2) => {
   if (num2 === 0) {
-    return "Can't Divide by Zero";
+    return "Error: Can't Divide by Zero";
   } else {
     return num1 / num2;
   }
 };
 
 // Operator that calls in specific function
-function operate(operator, num1, num2) {
-  console.log(operator);
-  console.log(typeof operator);
-  console.log(num1);
-  console.log(num2);
+const operate = (operator, num1, num2) => {
+  let answer;
 
-  if (operator === '+') {
-    add(num1, num2);
-  } else if (operator === '-') {
-    subtract(num1, num2);
-  } else if (operator === '*') {
-    multiply(num1, num2);
-  } else if (operator === '/') {
-    divide(num1, num2);
-  } else {
-    return 'Wrong operator';
+  switch (operator) {
+    case '+':
+      return (answer = add(num1, num2));
+    case '-':
+      return (answer = subtract(num1, num2));
+    case '*':
+      return (answer = multiply(num1, num2));
+    case '/':
+      return (answer = divide(num1, num2));
+    default:
+      console.log('Something is not right');
   }
-
-  // switch (operator) {
-  //   case '+':
-  //     add(num1, num2);
-  //     break;
-  //   case '-':
-  //     subtract(num1, num2);
-  //     break;
-  //   case '*':
-  //     multiply(num1, num2);
-  //     break;
-  //   case '/':
-  //     divide(num1, num2);
-  //     break;
-  //   default:
-  //     console.log('Something is not right');
-  // }
-}
+};
 
 // const operatorExists = (array) => {
 //   if (
@@ -85,36 +66,42 @@ function operate(operator, num1, num2) {
 //   }
 // };
 
+// Store numbers Input
 let numbersArr = [];
 
-let displayCurrentInput = '';
-let displayPreviousResult = '';
-let operatorIs;
+// Store currentInput, previousInput, and the operatorInput
+let currentInputDisplay = '';
+let previousInputDisplay = '';
+let operatorInput;
 
-const displayKey = (key) => {
-  displayCurrentInput += key;
-  console.log(displayCurrentInput);
-  currentInput.textContent = displayCurrentInput;
+// takes in an input
+// add the input to existing currentInput variable
+// display currentInputDisplay in its div
+const displayInput = (input) => {
+  currentInputDisplay += input;
+  currentInput.textContent = currentInputDisplay;
 };
 
+// Reset values
 const resetScreen = () => {
-  displayCurrentInput = '';
-  displayPreviousResult = '';
-  currentInput.textContent = displayCurrentInput;
-  previousResult.textContent = displayPreviousResult;
+  currentInputDisplay = '';
+  previousInputDisplay = '';
+  currentInput.textContent = currentInputDisplay;
+  previousResult.textContent = previousInputDisplay;
   numbersArr = [];
 };
 
+// When an operator is clicked
+// Take the string and replace the symbol with an empty string to keep numbers
+// Set newString type to Number
+// Push Number into numbersArr array
+// operator parameter stored as operatorInput
 const operatorClicked = (string, operator) => {
   const newString = string.replace(/[^a-zA-Z0-9]/g, '');
   const setInputToNum = Number(newString);
   numbersArr.push(setInputToNum);
-  console.log(numbersArr);
 
-  operatorIs = operator;
-  console.log(operatorIs);
-
-  console.log(typeof setInputToNum);
+  operatorInput = operator;
 };
 
 ////////////// Pressing Keys //////////////
@@ -123,50 +110,37 @@ const operatorClicked = (string, operator) => {
 // And get its textContent to display in the screen
 for (let i = 0; i < buttonNumbers.length; i++) {
   buttonNumbers[i].addEventListener('click', () => {
-    displayKey(buttonNumbers[i].textContent);
+    displayInput(buttonNumbers[i].textContent);
   });
 }
 
 // eventListener to operators
 for (let i = 0; i < buttonOperators.length; i++) {
   buttonOperators[i].addEventListener('click', () => {
-    displayKey(buttonOperators[i].textContent);
-    displayPreviousResult = displayCurrentInput;
-    previousResult.textContent = displayPreviousResult;
-    operatorClicked(displayCurrentInput, buttonOperators[i].textContent);
-    displayCurrentInput = '';
-    currentInput.innerHTML = displayCurrentInput;
+    displayInput(buttonOperators[i].textContent);
+    previousInputDisplay = currentInputDisplay;
+    previousResult.textContent = previousInputDisplay;
+    operatorClicked(currentInputDisplay, buttonOperators[i].textContent);
+    currentInputDisplay = '';
+    currentInput.innerHTML = currentInputDisplay;
   });
 }
 
-// addEventListener to dot
+// addEventListener to period key
 keyPeriod.addEventListener('click', () => {
-  displayKey('.');
+  displayInput('.');
 });
 
 let answer;
 
 // addEventListener to equal button
 keyEqual.addEventListener('click', () => {
-  const secondNum = Number(displayCurrentInput);
+  const secondNum = Number(currentInputDisplay);
   numbersArr.push(secondNum);
-  displayPreviousResult += displayCurrentInput;
-  previousResult.textContent = displayPreviousResult;
-  console.log(numbersArr);
-  console.log(operatorIs);
-  console.log(typeof operatorIs);
-
-  if (operatorIs === '+') {
-    answer = add(numbersArr[0], numbersArr[1]);
-  } else if (operatorIs === '-') {
-    answer = subtract(numbersArr[0], numbersArr[1]);
-  } else if (operatorIs === '*') {
-    answer = multiply(numbersArr[0], numbersArr[1]);
-  } else if (operatorIs === '/') {
-    answer = divide(numbersArr[0], numbersArr[1]);
-  } else {
-    return 'Wrong operator';
-  }
+  previousInputDisplay += currentInputDisplay;
+  previousResult.textContent = previousInputDisplay;
+  console.log(...numbersArr);
+  const answer = operate(operatorInput, ...numbersArr);
   currentInput.textContent = answer;
 });
 
