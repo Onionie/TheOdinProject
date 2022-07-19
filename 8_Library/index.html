@@ -4,10 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./public/styles.css" />
     <title>Library</title>
   </head>
   <body>
+    <header>
+      <nav>
+        <div class="title">Library</div>
+      </nav>
+    </header>
+
+    <section class="main-body">
+      <div class="add-book-container">
+        <div class="add-book-button">+ Add Book</div>
+      </div>
+      <div class="overlay"></div>
+      <div class="modal">
+        <form action="#">
+          <label for="title"></label>
+          <input type="text" placeholder="title" />
+        </form>
+      </div>
+      <div class="cards">
+        <div class="card">Card 1</div>
+      </div>
+    </section>
+
     <script src="./script.js"></script>
   </body>
 </html>

@@ -4,6 +4,84 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: aqua;
+  background-color: #edf6f9;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background-color: #83c5be;
+  padding-left: 10rem;
+}
+
+.title {
+  font-size: 7.2rem;
+  font-weight: 900;
+}
+
+.main-body {
+  width: 100%;
+  padding: 5rem 12rem;
+}
+
+.add-book-container {
+  width: 100%;
+  text-align: center;
+}
+
+.add-book-button {
+  display: inline-block;
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 700;
+  width: 22rem;
+  border-radius: 0.8rem;
+  background-color: #83c5be;
+  padding: 1rem;
+}
+
+.add-book-button:hover {
+  background-color: #98e2db;
+  cursor: pointer;
+}
+
+.add-book-button:active {
+  background-color: #006d77;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 50%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
+
+.cards {
+  display: flex;
 }
