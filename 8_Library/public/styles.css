@@ -150,6 +150,8 @@ div.modal-read-box {
 .cards {
   margin-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
 }
 
 .card {

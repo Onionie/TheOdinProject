@@ -8,6 +8,36 @@ const submitBtn = document.querySelector('.submit-button');
 const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
 const pagesInput = document.querySelector('#pages');
+const cardsDiv = document.querySelector('.cards');
+
+const createCards = function () {
+  // Creating HTML Elements
+  const bookCard = document.createElement('div');
+  bookCard.classList.add('card');
+
+  const bookTitle = document.createElement('div');
+  bookTitle.classList.add('card-title');
+  bookTitle.textContent = 'The Greatest Showman';
+
+  const bookAuthor = document.createElement('div');
+  bookAuthor.classList.add('card-author');
+  bookAuthor.textContent = 'F. Scott Barnes';
+
+  const bookPages = document.createElement('div');
+  bookPages.classList.add('card-pages');
+  bookPages.textContent = '231';
+
+  const bookRead = document.createElement('div');
+  bookRead.classList.add('card-read');
+
+  const bookRemove = document.createElement('div');
+  bookRemove.classList.add('card-remove');
+
+  cardsDiv.append(bookCard);
+  bookCard.append(bookTitle);
+  bookTitle.after(bookAuthor);
+  bookAuthor.after(bookPages);
+};
 
 // Functions
 const hideModal = () => {
@@ -20,6 +50,12 @@ const showModal = () => {
   modal.classList.remove('hidden');
 };
 
+const resetInputFields = () => {
+  titleInput.value = '';
+  authorInput.value = '';
+  pagesInput.value = '';
+};
+
 // Event Listeners
 addButton.addEventListener('click', () => {
   showModal();
@@ -27,6 +63,7 @@ addButton.addEventListener('click', () => {
 
 overlay.addEventListener('click', () => {
   hideModal();
+  resetInputFields();
 });
 
 // Submit Button
@@ -40,6 +77,8 @@ submitBtn.addEventListener('click', () => {
     alert('Fill Out Fields');
   } else {
     hideModal();
+    resetInputFields();
+    createCards();
     console.log('Submit Clicked');
   }
 });
