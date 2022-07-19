@@ -3,14 +3,29 @@
 // Selecting Elements
 const addButton = document.querySelector('.add-book-button');
 const overlay = document.querySelector('.overlay');
-
-// modal
-addButton.addEventListener('click', () => {
+const modal = document.querySelector('.modal');
+const submitBtn = document.querySelector('.submit-button');
+const hideModal = () => {
+  overlay.classList.add('hidden');
+  modal.classList.add('hidden');
+};
+const showModal = () => {
   overlay.classList.remove('hidden');
+  modal.classList.remove('hidden');
+};
+
+// Event Listeners
+addButton.addEventListener('click', () => {
+  showModal();
 });
 
 overlay.addEventListener('click', () => {
-  overlay.classList.add('hidden');
+  hideModal();
+});
+
+submitBtn.addEventListener('click', () => {
+  hideModal();
+  console.log('Submit Clicked');
 });
 
 let myLibrary = [];

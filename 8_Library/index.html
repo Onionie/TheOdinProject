@@ -28,11 +28,43 @@
       <div class="add-book-container">
         <div class="add-book-button">+ Add Book</div>
       </div>
-      <div class="overlay"></div>
-      <div class="modal">
-        <form action="#">
-          <label for="title"></label>
-          <input type="text" placeholder="title" />
+      <div class="overlay hidden"></div>
+      <div class="modal hidden">
+        <div class="modal-header">Add New Book</div>
+        <form class="modal-form" action="#">
+          <div class="modal-title-box">
+            <label for="title">Title</label>
+            <input
+              id="title"
+              type="text"
+              placeholder="The Great Gatsby"
+              autocomplete="off"
+            />
+          </div>
+          <div class="modal-author-box">
+            <label for="author">Author</label>
+            <input
+              id="author"
+              type="text"
+              placeholder="F. Scott Fitzgerald"
+              autocomplete="off"
+            />
+          </div>
+          <div class="modal-pages-box">
+            <label for="pages">Number of Pages</label>
+            <input
+              id="pages"
+              type="number"
+              inputmode="numeric"
+              placeholder="208"
+              autocomplete="off"
+            />
+          </div>
+          <div class="modal-read-box">
+            <label for="read">Have you read it?</label>
+            <input id="read" type="checkbox" class="modal-checkbox" />
+          </div>
+          <button class="submit-button" type="submit">Submit</button>
         </form>
       </div>
       <div class="cards">
