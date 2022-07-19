@@ -5,6 +5,9 @@ const addButton = document.querySelector('.add-book-button');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal');
 const submitBtn = document.querySelector('.submit-button');
+const titleInput = document.querySelector('#title');
+const authorInput = document.querySelector('#author');
+const pagesInput = document.querySelector('#pages');
 
 // Functions
 const hideModal = () => {
@@ -26,9 +29,19 @@ overlay.addEventListener('click', () => {
   hideModal();
 });
 
+// Submit Button
 submitBtn.addEventListener('click', () => {
-  hideModal();
-  console.log('Submit Clicked');
+  // Check Fields
+  if (
+    titleInput.value === '' ||
+    authorInput.value === '' ||
+    pagesInput.value === ''
+  ) {
+    alert('Fill Out Fields');
+  } else {
+    hideModal();
+    console.log('Submit Clicked');
+  }
 });
 
 let myLibrary = [];
