@@ -5,10 +5,13 @@ const addButton = document.querySelector('.add-book-button');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal');
 const submitBtn = document.querySelector('.submit-button');
+
+// Functions
 const hideModal = () => {
   overlay.classList.add('hidden');
   modal.classList.add('hidden');
 };
+
 const showModal = () => {
   overlay.classList.remove('hidden');
   modal.classList.remove('hidden');
