@@ -179,8 +179,16 @@ div.modal-read-box {
   border-radius: 0.6rem;
 }
 
+.card div a:hover {
+  cursor: pointer;
+}
+
 .read {
   background-color: #83c5be;
+}
+
+.not-read {
+  background-color: #f7b750;
 }
 
 .remove {

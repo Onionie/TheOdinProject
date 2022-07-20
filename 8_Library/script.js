@@ -9,6 +9,10 @@ const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
 const pagesInput = document.querySelector('#pages');
 const cardsDiv = document.querySelector('.cards');
+const cardRead = document.querySelector('.card-read');
+
+// Array Books Storage
+let myLibrary = [];
 
 // Functions
 const hideModal = () => {
@@ -27,7 +31,7 @@ const resetInputFields = () => {
   pagesInput.value = '';
 };
 
-// Display Books
+// Display Books (Cards)
 const createCard = function (book) {
   // Creating HTML Elements
   const bookCard = document.createElement('div');
@@ -47,21 +51,50 @@ const createCard = function (book) {
 
   const bookRead = document.createElement('div');
   bookRead.classList.add('card-read');
+  const bookReadAnc = document.createElement('a');
+  book.read === true
+    ? bookReadAnc.classList.add('read')
+    : bookReadAnc.classList.add('not-read');
+  bookReadAnc.textContent = `${book.read === true ? 'Read' : 'Not Read'}`;
 
   const bookRemove = document.createElement('div');
   bookRemove.classList.add('card-remove');
+  const bookRemoveAnc = document.createElement('a');
+  bookRemoveAnc.classList.add('remove');
+  bookRemoveAnc.textContent = 'Remove'; //Remove function
 
+  // Inserting elements in the html
   cardsDiv.append(bookCard);
   bookCard.append(bookTitle);
   bookTitle.after(bookAuthor);
   bookAuthor.after(bookPages);
+  bookPages.after(bookRead);
+  bookRead.append(bookReadAnc);
+  bookRead.after(bookRemove);
+  bookRemove.append(bookRemoveAnc);
 };
 
+// Map through an array to display the cards
 const displayAllBooks = function (arr) {
   arr.map((book) => {
     return createCard(book);
   });
 };
+
+// Card Read Exists?
+const cardReadExist = function () {
+  if (cardRead) {
+    console.log(cardRead);
+    cardRead.addEventListener('click', () => {
+      console.log('Read Clicked');
+    });
+  } else {
+    console.log('No Read Button Yet');
+  }
+};
+
+// Read or Not Read toggle
+const toggleRead = function () {};
 
 // Event Listeners
 addButton.addEventListener('click', () => {
@@ -89,8 +122,6 @@ submitBtn.addEventListener('click', () => {
     console.log('Submit Clicked');
   }
 });
-
-let myLibrary = [];
 
 const Book = function (title, author, numOfPages, read) {
   this.title = title;
