@@ -57,6 +57,12 @@ const createCard = function (book) {
     : bookReadAnc.classList.add('not-read');
   bookReadAnc.textContent = `${book.read === true ? 'Read' : 'Not Read'}`;
 
+  // Functionality?
+  bookRead.addEventListener('click', function () {
+    console.log('Read Clicked');
+    book.read === true ? false : true;
+  });
+
   const bookRemove = document.createElement('div');
   bookRemove.classList.add('card-remove');
   const bookRemoveAnc = document.createElement('a');
@@ -95,6 +101,9 @@ const cardReadExist = function () {
 
 // Read or Not Read toggle
 const toggleRead = function () {};
+
+// Remove Function
+const RemoveBook = function () {};
 
 // Event Listeners
 addButton.addEventListener('click', () => {
